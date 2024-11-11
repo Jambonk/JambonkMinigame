@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="center">
-        <button class="start-button">START</button>
+    <div class="container">
+        <button class="start-button" onclick="redirectToTarget()">START</button>
     </div>
-    <audio id="start-sound" src="Video Game Start Sound Effect - SoundSling (youtube).mp3"></audio>
-    <audio id="correct-sound" src="Cash_Money Sound Effect - Ini Itu (youtube).mp3"></audio>
-    <audio id="wrong-sound" src="Pac-Man Death - Sound Effect (HD) - Gaming Sound FX (youtube).mp3"></audio>
+
+    <script>
+        function redirectToTarget() {
+            window.location.href = "target.html";
+        }
+    </script>
 </body>
-<script src="script.js"></script>
 </html>
