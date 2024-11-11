@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Gumball;
-    src: url('Gumball.TTF');
+    font-family: 'Gumball';
+    src: url(Gumball.TTF);
 }
 
 body {
