@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Gumball';
-    src: url('./Fonts/Gumball.TTF') format('truetype');
-}
+            font-family: Gumball;
+            src: url('Fonts/Gumball.TTF');
+        }
 
 body {
     margin: 0;
