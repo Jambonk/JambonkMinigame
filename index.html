@@ -16,8 +16,12 @@
     <script>
         document.getElementById("startButton").addEventListener("click", function() {
             var audio = document.getElementById("gameStartSound");
-            audio.play();
-            
+
+            audio.play().catch(function(error) {
+                console.error("Error playing audio:", error);
+                alert("Unable to play audio. Please check the file path and format.");
+            });
+
             audio.onended = function() {
                 window.location.href = "target.html";
             };
