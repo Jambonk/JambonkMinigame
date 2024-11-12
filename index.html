@@ -11,11 +11,11 @@
         <button id="startButton" class="start-button">START</button>
     </div>
 
-    <audio id=gameStartSound src="StartSound.mp3"></audio>
+    <audio id="gameStartSound" src="Sounds/StartSound.mp3"></audio>
 
     <script>
         document.getElementById("startButton").addEventListener("click", function() {
-            var audio = document.getElementById('gameStartSound');
+            var audio = document.getElementById("gameStartSound");
             audio.play();
             
             audio.onended = function() {
