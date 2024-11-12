@@ -1,14 +1,14 @@
 @font-face {
     font-family: Mario;
-    src: url('MiniGame/Mario.ttf');
+    src: url('Fonts/Mario.ttf');
 }
 @font-face {
     font-family: Daydream;
-    src: url('../MiniGame/Daydream.ttf');
+    src: url('Fonts/Daydream.ttf');
 }
 @font-face {
     font-family: WONDER;
-    src: url('MiniGame/WONDER.TTF');
+    src: url('Fonts/WONDER.TTF');
 }
 
 body {
