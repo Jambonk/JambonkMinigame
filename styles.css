@@ -1,7 +1,65 @@
 @font-face {
-    font-family: 'Mario';
-    src: url('Fonts/Mario.ttf');
+    font-family: Mario;
+    src: url('MiniGame/Mario.ttf');
 }
+@font-face {
+    font-family: Daydream;
+    src: url('../MiniGame/Daydream.ttf');
+}
+@font-face {
+    font-family: WONDER;
+    src: url('MiniGame/WONDER.TTF');
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.question-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.question-text {
+    font-family: 'WONDER', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer-option {
+    font-family: 'Daydream', sans-serif;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+    text-align: center;
+    font-size: 20px;
+}
+
+.answer-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
 
 body {
     margin: 0;
@@ -18,7 +76,7 @@ body {
 }
 
 .start-button {
-    font-family: 'Mario', sans-serif;
+    font-family: 'WONDER', sans-serif;
     font-size: 48px;
     padding: 20px 60px;
     color: #fff;
