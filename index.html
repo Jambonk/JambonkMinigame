@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Start!</title>
     <link rel="stylesheet" href="styles.css">
-     <script>
-        function delayRedirect() {
-            setTimeout(function() {
-                window.location.href = 'target.html';
-            }, 5000);
-        }
-    </script>
 </head>
 <body>
     <div class="container">
-        <button class="start-button" onclick="redirectToTarget()">START</button>
+        <button id="startButton" class="start-button">START</button>
     </div>
 
+    <audio id="gameStartSound" src="StartSound.mp3"></audio>
+
     <script>
-        function redirectToTarget() {
-            window.location.href = "target.html";
-        }
+        document.getElementById("startButton").addEventListener("click", function() {
+            var audio = document.getElementById("gameStartSound");
+            audio.play();
+            
+            audio.onended = function() {
+                window.location.href = "target.html";
+            };
+        });
     </script>
 </body>
+</html>
