@@ -28,12 +28,19 @@
     <script>
         function checkAnswer(element, isCorrect) {
             if (isCorrect) {
+                var rightSound = new Audio('Sounds/Right8bit.mp3');
+                rightSound.play();
+                
                 element.classList.add("correct-answer");
                 setTimeout(function() {
                     document.getElementById("congratsMessage").style.display = "block";
                     document.getElementById("congratsText").innerText = "CONGRATULATION!";
                     document.getElementById("giftText").innerText = "You deserve a gift ^^";
                     document.getElementById("continueButton").innerText = "to be continue";
+                    
+                    var victorySound = new Audio('../MiniGame/Sounds/8bitVictory.mp3');
+                    victorySound.play();
+
                     document.getElementById("continueButton").onclick = function() {
                     };
                 }, 1500);
