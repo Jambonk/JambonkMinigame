@@ -21,6 +21,10 @@
         <p id="giftText" class="gift-text">You deserve a gift ^^</p>
         <div id="continueButton" class="continue-button">to be continue</div>
     </div>
+
+    <audio id="wrongSound" src="Sounds/Wrong8bit.mp3"></audio>
+    <audio id="tryAgainSound" src="Sounds/PacManDeath.mp3"></audio>
+
     <script>
         function checkAnswer(element, isCorrect) {
             if (isCorrect) {
@@ -35,11 +39,18 @@
                 }, 1500);
             } else {
                 element.classList.add("wrong-answer");
+                var wrongSound = document.getElementById("wrongSound");
+                wrongSound.play();
+
                 setTimeout(function() {
                     document.getElementById("congratsMessage").style.display = "block";
                     document.getElementById("congratsText").innerText = "AW LET'S TRY AGAIN!";
                     document.getElementById("giftText").innerText = "";
                     document.getElementById("continueButton").innerText = "Try Again";
+                    
+                    var tryAgainSound = document.getElementById("tryAgainSound");
+                    tryAgainSound.play();
+
                     document.getElementById("continueButton").onclick = function() {
                         location.reload();
                     };
