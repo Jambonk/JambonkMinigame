@@ -28,7 +28,7 @@
     <script>
         function checkAnswer(element, isCorrect) {
             if (isCorrect) {
-                var rightSound = new Audio('../MiniGame/Sounds/Right8bit.mp3');
+                var rightSound = new Audio('Sounds/Right8bit.mp3');
                 rightSound.play();
                 
                 element.classList.add("correct-answer");
@@ -38,14 +38,14 @@
                     document.getElementById("giftText").innerText = "You deserve a gift ^^";
                     document.getElementById("continueButton").innerText = "to be continue";
                     
-                    var victorySound = new Audio('../MiniGame/Sounds/8bitVictory.mp3');
+                    var victorySound = new Audio('Sounds/8bitVictory.mp3');
                     victorySound.play();
 
                     document.getElementById("continueButton").onclick = function() {
-                        var continueSound = new Audio('../MiniGame/Sounds/Right8bit.mp3');
+                        var continueSound = new Audio('Sounds/Right8bit.mp3');
                         continueSound.play();
                         setTimeout(function() {
-                            window.location.href = "another_question.html"; // Tiếp tục với câu hỏi khác nếu muốn
+                            window.location.href = "another_question.html";
                         }, 500);
                     };
                 }, 1500);
