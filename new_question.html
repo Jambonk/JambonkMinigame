@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game - New Question</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="black-background">
+    <div class="question-container">
+        <p class="question-text">QUESTION: What year was OpenAI founded?</p>
+        <div class="answer-options">
+            <div class="answer-option" onclick="checkAnswer(this, false)">A. 2015</div>
+            <div class="answer-option" onclick="checkAnswer(this, true)">B. 2016</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">C. 2017</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">D. 2018</div>
+        </div>
+    </div>
+    <div id="congratsMessage" class="congrats-container" style="display: none;">
+        <p id="congratsText" class="congrats-text">CONGRATULATION!</p>
+        <p id="giftText" class="gift-text">You deserve a gift ^^</p>
+        <div id="continueButton" class="continue-button">to be continue</div>
+    </div>
+
+    <audio id="wrongSound" src="Sounds/Wrong8bit.mp3"></audio>
+    <audio id="tryAgainSound" src="Sounds/PacManDeath.mp3"></audio>
+
+    <script>
+        function checkAnswer(element, isCorrect) {
+            if (isCorrect) {
+                var rightSound = new Audio('../MiniGame/Sounds/Right8bit.mp3');
+                rightSound.play();
+                
+                element.classList.add("correct-answer");
+                setTimeout(function() {
+                    document.getElementById("congratsMessage").style.display = "block";
+                    document.getElementById("congratsText").innerText = "CONGRATULATION!";
+                    document.getElementById("giftText").innerText = "You deserve a gift ^^";
+                    document.getElementById("continueButton").innerText = "to be continue";
+                    
+                    var victorySound = new Audio('../MiniGame/Sounds/8bitVictory.mp3');
+                    victorySound.play();
+
+                    document.getElementById("continueButton").onclick = function() {
+                        var continueSound = new Audio('../MiniGame/Sounds/Right8bit.mp3');
+                        continueSound.play();
+                        setTimeout(function() {
+                            window.location.href = "another_question.html"; // Tiếp tục với câu hỏi khác nếu muốn
+                        }, 500);
+                    };
+                }, 1500);
+            } else {
+                element.classList.add("wrong-answer");
+                var wrongSound = document.getElementById("wrongSound");
+                wrongSound.play();
+
+                setTimeout(function() {
+                    document.getElementById("congratsMessage").style.display = "block";
+                    document.getElementById("congratsText").innerText = "AW LET'S TRY AGAIN!";
+                    document.getElementById("giftText").innerText = "";
+                    document.getElementById("continueButton").innerText = "Try Again";
+                    
+                    var tryAgainSound = document.getElementById("tryAgainSound");
+                    tryAgainSound.play();
+
+                    document.getElementById("continueButton").onclick = function() {
+                        location.reload();
+                    };
+                }, 1500);
+            }
+        }
+    </script>
+</body>
+</html>
