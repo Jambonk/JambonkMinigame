@@ -1,14 +1,18 @@
 @font-face {
-    font-family: Mario;
-    src: url('Fonts/Mario.ttf');
+    font-family: 'Pixellari';
+    src: url('../MiniGame/Pixellari.ttf');
+}    
+@font-face {
+    font-family: 'Mario';
+    src: url('../MiniGame/Mario.ttf');
 }
 @font-face {
-    font-family: Daydream;
-    src: url('Fonts/Daydream.ttf');
+    font-family: 'Daydream';
+    src: url('../MiniGame/Daydream.ttf');
 }
 @font-face {
-    font-family: WONDER;
-    src: url('Fonts/WONDER.TTF');
+    font-family: 'WONDER';
+    src: url('../MiniGame/WONDER.TTF');
 }
 
 body {
@@ -178,4 +182,30 @@ body {
     100% {
         border-color: red;
     }
+}
+
+.video-ending {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.video-ending video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: 4px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.ending-text {
+    font-family: 'Mario', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
 }
