@@ -5,15 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Game</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .jotaro-image {
+            position: absolute;
+            left: 250px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+        }
+
+        .question-container {
+            margin-left: 200px;
+        }
+    </style>
+    <style>
+        .Dio-image {
+            position: absolute;
+            right: 250px;
+            top: 28%;
+            transform: translateY(-50%);
+            width: 300px;
+            transform: scaleX(-1);
+        }
+
+        .question-container {
+            margin-right: 200px;
+        }
+    </style>
 </head>
 <body class="black-background">
+    <img src="Jotarowithstand.webp" alt="Jotaro with Stand" class="jotaro-image">
+    <img src="Dio.gif" alt="Dio" class="Dio-image">
     <div class="question-container">
-        <p class="question-text">QUESTION:Who founded OpenAI?</p>
+        <p class="question-text">QUESTION:Nhận định nào sau đây là đúng?</p>
         <div class="answer-options">
-            <div class="answer-option" onclick="checkAnswer(this, true)">A. Elon Musk</div>
-            <div class="answer-option" onclick="checkAnswer(this, false)">B. Mark Zuckerberg</div>
-            <div class="answer-option" onclick="checkAnswer(this, false)">C. Bill Gates</div>
-            <div class="answer-option" onclick="checkAnswer(this, false)">D. Sundar Pichai</div>
+            <div class="answer-option" onclick="checkAnswer(this, true)">A. Một mối quan hệ tốt phải dựa trên sự chân thành, tin tưởng từ cả hai phía.</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">B. Bạn bè với nhau có thể nhờ vả bất cứ chuyện gì, kể cả làm bài tập hộ.</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">C. Chỉ cần lễ phép với thầy cô khi ở trong trường, ra ngoài thì không cần.</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">D. Không nhất thiết phải thể hiện trách nhiệm chung với lớp mới có thể giữ mối quan hệ bạn bè.</div>
         </div>
     </div>
     <div id="congratsMessage" class="congrats-container" style="display: none;">
