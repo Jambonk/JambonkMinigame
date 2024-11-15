@@ -5,15 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Game - New Question</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .jotaro-image {
+            position: absolute;
+            left: 250px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+        }
+
+        .question-container {
+            margin-left: 200px;
+        }
+    </style>
+        <style>
+            .Dio-image {
+                position: absolute;
+                right: 250px;
+                top: 28%;
+                transform: translateY(-50%);
+                width: 300px;
+                transform: scaleX(-1);
+            }
+    
+            .question-container {
+                margin-right: 200px;
+            }
+        </style>
 </head>
 <body class="black-background">
+    <img src="Jotarowithstand.webp" alt="Jotaro with Stand" class="jotaro-image">
+    <img src="Dio.gif" alt="Dio" class="Dio-image">
     <div class="question-container">
-        <p class="question-text">QUESTION: What year was OpenAI founded?</p>
+        <p class="question-text">QUESTION: Trong tiết thực hành môn Hóa học, các bạn cùng nhóm đang làm thí nghiệm thì Khánh mang bài tập Toán ra làm. Là bạn của Khánh, em sẽ xử lý như thế nào để Khánh phát triển mối quan hệ hòa đồng với thầy cô?</p>
         <div class="answer-options">
-            <div class="answer-option" onclick="checkAnswer(this, false)">A. 2015</div>
-            <div class="answer-option" onclick="checkAnswer(this, true)">B. 2016</div>
-            <div class="answer-option" onclick="checkAnswer(this, false)">C. 2017</div>
-            <div class="answer-option" onclick="checkAnswer(this, false)">D. 2018</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">A. Nhắc nhở Khánh không nên làm bài tập môn Toán trong tiết thực hành môn Hóa học vì đó là làm việc riêng trong giờ học.</div>
+            <div class="answer-option" onclick="checkAnswer(this, true)">B. Nhắc Khánh không nên làm bài tập môn Toán trong tiết thực hành môn Hóa học vì không những ảnh hưởng đến việc tiếp thu kiến thức của Khánh mà còn ảnh hưởng đến kết quả thực hành chung của nhóm, đặc biệt là tinh thần làm việc của nhóm và sự đánh giá của thầy cô.</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">C. Chỉ trích Khánh vì việc làm của Khánh làm ảnh hưởng đến kết quả của nhóm và sự đánh giá của thầy cô.</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">D. Mặc kệ Khánh và không quan tâm.</div>
         </div>
     </div>
     <div id="congratsMessage" class="congrats-container" style="display: none;">
