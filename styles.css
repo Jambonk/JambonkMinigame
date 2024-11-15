@@ -14,6 +14,10 @@
     font-family: 'WONDER';
     src: url('Fonts/WONDER.TTF');
 }
+@font-face {
+    font-family: 'Crux';
+    src: url('Fonts/Crux.otf');
+}
 
 body {
     margin: 0;
@@ -69,7 +73,7 @@ body {
 }
 
 .question-text {
-    font-family: 'WONDER', sans-serif;
+    font-family: 'Crux', sans-serif;
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -81,7 +85,7 @@ body {
 }
 
 .answer-option {
-    font-family: 'Daydream', sans-serif;
+    font-family: 'Crux', sans-serif;
     padding: 10px;
     border: 2px solid #fff;
     border-radius: 10px;
