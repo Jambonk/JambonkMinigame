@@ -5,15 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Game - Final Question</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .jotaro-image {
+            position: absolute;
+            left: 250px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+        }
+
+        .question-container {
+            margin-left: 200px;
+        }
+    </style>
+        <style>
+            .Dio-image {
+                position: absolute;
+                right: 250px;
+                top: 28%;
+                transform: translateY(-50%);
+                width: 300px;
+                transform: scaleX(-1);
+            }
+    
+            .question-container {
+                margin-right: 200px;
+            }
+        </style>
 </head>
 <body class="black-background">
+    <img src="Jotarowithstand.webp" alt="Jotaro with Stand" class="jotaro-image">
+    <img src="Dio.gif" alt="Dio" class="Dio-image">
     <div class="question-container">
-        <p class="question-text">QUESTION: Which of these is known as the father of modern physics?</p>
+        <p class="question-text">QUESTION: Trong các giờ học, B sợ nhất là giờ Toán vì không hiểu bài và nhiều khi không thể tự giải được các bài tập. B luôn mất tự tin và thiếu hoà đồng với thầy giáo dạy Toán và các bạn. Nếu là bạn của B, em sẽ làm gì để B có thể phát triển hoà đồng giữa thầy cô và bạn bè?</p>
         <div class="answer-options">
-            <div class="answer-option" onclick="checkAnswer(this, false)">A. Nikola Tesla</div>
-            <div class="answer-option" onclick="checkAnswer(this, false)">B. Isaac Newton</div>
-            <div class="answer-option" onclick="checkAnswer(this, false)">C. Galileo Galilei</div>
-            <div class="answer-option" onclick="checkAnswer(this, true)">D. Albert Einstein</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">A. Khuyên B nên đi học gia sư.</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">B. Khuyên B không nên gặp thầy giáo dạy môn Toán để chia sẻ với thầy về khó khăn của bản thân.</div>
+            <div class="answer-option" onclick="checkAnswer(this, true)">C. Khuyên B nên gặp những bạn học tốt môn Toán trong lớp, nhờ các bạn giảng lại những chỗ không hiểu và nhờ thầy giáo dạy toán hướng dẫn phương pháp học toán hiệu quả.</div>
+            <div class="answer-option" onclick="checkAnswer(this, false)">D. Đưa cho B lời khuyên rằng học toán là không ngừng bỏ cuộc.</div>
         </div>
     </div>
     <div id="congratsMessage" class="congrats-container" style="display: none;">
@@ -28,7 +57,7 @@
     <script>
         function checkAnswer(element, isCorrect) {
             if (isCorrect) {
-                var rightSound = new Audio('Sounds/Right8bit.mp3');
+                var rightSound = new Audio('../MiniGame/Sounds/Right8bit.mp3');
                 rightSound.play();
                 
                 element.classList.add("correct-answer");
@@ -38,11 +67,11 @@
                     document.getElementById("giftText").innerText = "You deserve a gift ^^";
                     document.getElementById("continueButton").innerText = "to be continue";
                     
-                    var victorySound = new Audio('Sounds/8bitVictory.mp3');
+                    var victorySound = new Audio('../MiniGame/Sounds/8bitVictory.mp3');
                     victorySound.play();
 
                     document.getElementById("continueButton").onclick = function() {
-                        var continueSound = new Audio('Sounds/Right8bit.mp3');
+                        var continueSound = new Audio('../MiniGame/Sounds/Right8bit.mp3');
                         continueSound.play();
                         setTimeout(function() {
                             displayVideoEnding();
@@ -75,6 +104,7 @@
                 <div class="video-ending">
                     <video controls autoplay>
                         <source src="JotaroDio.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
                     </video>
                     <p class="ending-text">you've unlocked an ending ^^</p>
                 </div>
